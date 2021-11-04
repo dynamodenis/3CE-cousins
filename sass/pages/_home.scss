@@ -119,6 +119,10 @@
     @include respond(tab-land) {
       padding: 9.6rem;
     }
+
+    @include respond(phone) {
+      padding: 9.6rem 6.2rem;
+    }
   }
 
   &__image {
@@ -171,7 +175,7 @@
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       display: block;
       background-color: $color-primary-light-1;
       position: absolute;

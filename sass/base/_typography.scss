@@ -1,5 +1,5 @@
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   color: $color-dark-grey-1;
 }
 
@@ -22,7 +22,7 @@ body {
     display: inline-block;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       bottom: 0;
@@ -33,6 +33,10 @@ body {
         left: 50%;
         transform: translateX(-50%);
       }
+    }
+    @include respond(phone) {
+      display: block;
+      text-align: center;
     }
 
     &--bg-white {
