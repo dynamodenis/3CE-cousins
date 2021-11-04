@@ -34,6 +34,10 @@
     font-size: 1.4rem;
     line-height: $line-height-medium;
     margin-top: auto;
+
+    @include respond(phone) {
+      text-align: center;
+    }
   }
 }
 
@@ -43,6 +47,10 @@
   @include respond(tab-port) {
     gap: 2.4rem !important;
     grid-template-rows: auto;
+  }
+
+  @include respond(phone) {
+    padding: 0 !important;
   }
 }
 

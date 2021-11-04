@@ -43,7 +43,8 @@ body {
   font-size: 4.4rem;
   position: relative;
   line-height: 1.8;
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: 4rem; }
   .heading__secondary::after {
     content: '';
     position: absolute;
@@ -58,7 +59,8 @@ body {
   @media only screen and (max-width: 37.5em) {
     .heading__secondary {
       display: block;
-      text-align: center; } }
+      text-align: center;
+      margin-bottom: 8rem !important; } }
   .heading__secondary--bg-white {
     color: #333; }
     .heading__secondary--bg-white::after {
@@ -234,6 +236,9 @@ body {
     font-size: 1.4rem;
     line-height: 1.2;
     margin-top: auto; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__copyright {
+        text-align: center; } }
 
 .grid--footer {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); }
@@ -241,6 +246,9 @@ body {
     .grid--footer {
       gap: 2.4rem !important;
       grid-template-rows: auto; } }
+  @media only screen and (max-width: 37.5em) {
+    .grid--footer {
+      padding: 0 !important; } }
 
 .contact {
   list-style: none;
