@@ -1,0 +1,38 @@
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+
+  @include respond(tab-land) {
+    padding: 0 8rem;
+  }
+
+  @include respond(phone) {
+    padding: 4.8rem;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+
+  @include respond(tab-port) {
+    gap: 8rem;
+  }
+}
+
+.grid--col-2 {
+  grid-template-columns: repeat(2, 1fr);
+
+  @include respond(tab-land) {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+}
+
+.grid--col-3 {
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+  @include respond(phone) {
+    grid-gap: 12.8rem;
+  }
+}

@@ -1,0 +1,300 @@
+.section {
+  padding: 9.6rem 0;
+
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
+
+  @include respond(phone) {
+    padding: 6.2rem 0;
+  }
+}
+
+/********************************
+*** SECTION HERO
+********************************/
+.section {
+  &__hero {
+    background-color: $bg-color-primary-light;
+    padding: 4.8rem 0 9.6rem 0;
+    margin-top: 6rem;
+
+    @include respond(tab-port) {
+      margin-top: 4rem;
+    }
+
+    @include respond(phone) {
+      padding: 0;
+    }
+  }
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 130rem;
+  margin: 0 auto;
+  align-items: center;
+  gap: 9.6rem;
+  padding: 3.2rem;
+
+  @include respond(tab-land) {
+    padding: 9.6rem;
+  }
+
+  @include respond(tab-port) {
+    gap: 6.4rem;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 4.8rem;
+    gap: 3.2rem;
+  }
+
+  &__text-box {
+    padding: 6.4rem;
+
+    @include respond(tab-land) {
+      padding: 3.2rem;
+    }
+
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 4.8rem;
+  }
+
+  &__img {
+    display: block;
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+}
+
+/********************************
+*** SECTION ABOUT
+********************************/
+.about {
+  grid-template-columns: 1fr 3fr;
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 3.2rem;
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    line-height: $line-height-large;
+    margin-bottom: 2.4rem;
+
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+}
+
+/********************************
+*** SECTION RPODUCT
+********************************/
+.section__products {
+  background-color: $color-primary;
+}
+
+.products {
+  &__text-box {
+    padding: 9.6rem 9.6rem 9.6rem 0;
+    color: #e9f7ef;
+    align-self: center;
+
+    @include respond(tab-land) {
+      padding: 9.6rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    line-height: $line-height-large;
+
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+}
+
+/********************************
+*** SECTION TEAM
+********************************/
+.section__team {
+  @include respond(phone) {
+    text-align: center;
+  }
+}
+
+.team {
+  &__heading-text {
+    font-size: 1.8rem;
+    line-height: $line-height-large;
+    width: 70%;
+    margin-top: 4.8rem;
+    margin-bottom: 9.6rem;
+
+    @include respond(phone) {
+      margin: 4.8rem auto 9.6rem;
+    }
+  }
+
+  &__member {
+    text-align: center;
+  }
+
+  &__img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 6rem;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      background-color: $color-primary-light-1;
+      position: absolute;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      width: 70%;
+      padding-bottom: 70%;
+      z-index: -2;
+    }
+
+    &::after {
+      width: 60%;
+      padding-bottom: 60%;
+      background-color: $color-primary-light-2;
+      z-index: -1;
+    }
+  }
+
+  &__img {
+    display: block;
+    border-radius: 50%;
+    width: 50%;
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: $line-height-large;
+    margin-bottom: 1rem;
+  }
+
+  &__details {
+    font-size: $default-font-size;
+    line-height: 1.6;
+  }
+
+  &__descriptions {
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: $line-height-large;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+/********************************
+*** SECTION INVESTMENT
+********************************/
+.section__investment {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: $color-white;
+
+  @include respond(tab-port) {
+    background-attachment: scroll;
+  }
+}
+
+.investment__text {
+  font-size: 1.8rem;
+  line-height: $line-height-large;
+}
+
+/********************************
+*** SECTION BUSINESS
+********************************/
+.business {
+  width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6.2rem;
+
+  gap: 8rem;
+
+  @include respond(tab-port) {
+    width: 100%;
+    margin-top: 4.8rem;
+  }
+
+  &__card {
+    border: 2px solid $color-primary;
+    padding: 4.8rem 4.8rem 4.8rem 6.2rem;
+
+    position: relative;
+
+    @include respond(tab-port) {
+      padding: 6.2rem 4.8rem 4.8rem 4.8rem;
+    }
+
+    &::before {
+      content: attr(number);
+      width: 9.6rem;
+      height: 9.6rem;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-color: $bg-color-white;
+      border: 2px solid $color-primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.4rem;
+
+      @include respond(tab-port) {
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    line-height: $line-height-large;
+  }
+}

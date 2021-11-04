@@ -1,0 +1,81 @@
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  background-color: $bg-color-white;
+  width: 95%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5.2rem 1rem 4.8rem;
+  z-index: 9999;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  @include respond(tab-port) {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 100%;
+  }
+}
+
+.logo {
+  display: block;
+  height: 6rem;
+
+  @include respond(phone) {
+    height: 3rem;
+  }
+}
+
+.main-nav {
+  @include respond(tab-port) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: all 0.3s;
+    opacity: 0;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+    list-style: none;
+
+    @include respond(tab-port) {
+      background-color: rgba($color: #fff, $alpha: 0.95);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      gap: 4.8rem;
+    }
+  }
+
+  &__link,
+  &__link:link,
+  &__link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-dark-grey-2;
+    font-weight: $font-weight-medium;
+    font-size: 1.8rem;
+    transition: all 0.3s;
+
+    @include respond(tab-port) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__link:active,
+  &__link:hover {
+    color: $color-primary;
+  }
+}
+
+.nav-open .main-nav {
+  transform: translateX(0);
+  opacity: 1;
+}
