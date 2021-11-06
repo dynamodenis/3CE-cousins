@@ -308,17 +308,34 @@ body {
     .grid--col-3 {
       grid-gap: 12.8rem; } }
 
-.header {
+.header-top {
   position: fixed;
+  width: 100%;
   top: 0;
+  z-index: 9999;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: #fff; }
+
+.notification {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #fff;
+  display: none; }
+
+.notification--success {
+  background-color: #27ae60;
+  display: block; }
+
+.notification--error {
+  background-color: red;
+  display: block; }
+
+.header {
   display: flex;
-  background-color: #fff;
-  width: 95%;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5.2rem 1rem 4.8rem;
-  z-index: 9999;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; }
+  padding: 1rem 5.2rem 1rem 4.8rem; }
   @media only screen and (max-width: 56.25em) {
     .header {
       padding-top: 0;

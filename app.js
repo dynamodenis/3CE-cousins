@@ -14,7 +14,7 @@ dotenv.config({ path: './config.env' });
 const port = process.env.PORT || 3000;
 
 app.use(morgan('dev'));
-
+app.use(express.json());
 app.use(express.static(`${__dirname}`));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 app.use(compression());
@@ -35,15 +35,11 @@ app.post('/send-message', async (req, res) => {
 
     res
       .status(200)
-      .end(
-        '<h1>Email sent successfully!</h1><a href="/">&larr; Back to main site</a>'
-      );
+      .json({ status: 'success', message: 'Email sent successfully!' });
   } catch (err) {
     res
       .status(500)
-      .end(
-        "<h1>An error occured. Please try again!</h1><a href='/'>&larr; Back to main site</a>"
-      );
+      .json({ status: 'fail', message: 'Error. Message not sent!' });
   }
 });
 

@@ -1,14 +1,36 @@
-.header {
+.header-top {
   position: fixed;
+  width: 100%;
   top: 0;
-  display: flex;
+
+  z-index: 9999;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   background-color: $bg-color-white;
-  width: 95%;
+}
+
+.notification {
+  padding: 1rem;
+  text-align: center;
+  font-size: $default-font-size;
+  color: $color-white;
+  display: none;
+}
+
+.notification--success {
+  background-color: $color-primary;
+  display: block;
+}
+
+.notification--error {
+  background-color: red;
+  display: block;
+}
+
+.header {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5.2rem 1rem 4.8rem;
-  z-index: 9999;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
   @include respond(tab-port) {
     padding-top: 0;

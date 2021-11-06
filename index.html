@@ -21,52 +21,57 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
-      <a href="#">
-        <img
-          src="images/logo.png"
-          class="logo"
-          alt="Theree cousins energy company logo"
-        />
-      </a>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#about-us">About us</a>
-          </li>
-          <li>
-            <a class="main-nav__link" href="#our-products">Our products</a>
-          </li>
-          <!-- <li class="main-nav__item">
-            <a class="main-nav__link" href="#our-team">Our team</a>
-          </li> -->
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#our-investment">Our investment</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link nav-cta" href="#business-process"
-              >Business process</a
-            >
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link nav-cta" href="#cta">Contact us</a>
-          </li>
-        </ul>
-      </nav>
-      <button class="btn btn--mobile-nav">
-        <ion-icon
-          class="icon-mobile-nav md hydrated"
-          name="menu-outline"
-          role="img"
-          aria-label="menu outline"
-        ></ion-icon>
-        <ion-icon
-          class="icon-mobile-nav md hydrated"
-          name="close-outline"
-          role="img"
-          aria-label="close outline"
-        ></ion-icon>
-      </button>
+    <header class="header-top">
+      <div class="notification">Message</div>
+      <div class="header">
+        <a href="#">
+          <img
+            src="images/logo.png"
+            class="logo"
+            alt="Theree cousins energy company logo"
+          />
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#about-us">About us</a>
+            </li>
+            <li>
+              <a class="main-nav__link" href="#our-products">Our products</a>
+            </li>
+            <!-- <li class="main-nav__item">
+              <a class="main-nav__link" href="#our-team">Our team</a>
+            </li> -->
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#our-investment"
+                >Our investment</a
+              >
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link nav-cta" href="#business-process"
+                >Business process</a
+              >
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link nav-cta" href="#cta">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="btn btn--mobile-nav">
+          <ion-icon
+            class="icon-mobile-nav md hydrated"
+            name="menu-outline"
+            role="img"
+            aria-label="menu outline"
+          ></ion-icon>
+          <ion-icon
+            class="icon-mobile-nav md hydrated"
+            name="close-outline"
+            role="img"
+            aria-label="close outline"
+          ></ion-icon>
+        </button>
+      </div>
     </header>
 
     <main>
@@ -273,12 +278,7 @@
             <div class="cta__text-box">
               <h2 class="cta__heading">Feel free to contact us!</h2>
               <p class="cta__text">Don't hesitate to reach out!</p>
-              <form
-                class="cta__form"
-                name="sign-up"
-                method="POST"
-                action="/send-message"
-              >
+              <form class="cta__form" name="sign-up" method="POST">
                 <div>
                   <label for="full-name">Full name</label>
                   <input id="full-name" type="text" name="name" required />
@@ -379,6 +379,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="./js/script.js"></script>
   </body>
 </html>
