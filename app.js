@@ -9,7 +9,8 @@ const compression = require('compression');
 
 const app = express();
 
-dotenv.config({ path: './config.env' });
+dotenv.config();
+
 
 const port = process.env.PORT || 3000;
 

@@ -76,6 +76,7 @@ document.querySelector('.cta__form').addEventListener('submit', (e) => {
   };
 
   const showMessage = (data) => {
+
     const notification = document.querySelector('.notification');
 
     const time = 3000;
